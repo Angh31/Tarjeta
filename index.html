@@ -128,6 +128,11 @@
         background-clip: padding-box;
       }
 
+      /* Card compacta para reflexión y final */
+      .card-compact {
+        padding: 25px 20px;
+      }
+
       /* Borde degradado animado */
       .card::before {
         content: "";
@@ -344,6 +349,11 @@
         animation: titlePulse 3s ease-in-out infinite;
       }
 
+      .section-title-compact {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+      }
+
       @keyframes titlePulse {
         0%,
         100% {
@@ -386,10 +396,21 @@
         text-align: justify;
       }
 
+      .message-text-compact {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 12px;
+      }
+
       .emoji-big {
         font-size: 3rem;
         margin: 20px 0;
         animation: bounce 2s ease-in-out infinite;
+      }
+
+      .emoji-compact {
+        font-size: 2rem;
+        margin: 10px 0;
       }
 
       @keyframes bounce {
@@ -402,24 +423,29 @@
         }
       }
 
-      /* ========== CUADROS DE CITAS MEJORADOS ========== */
+      /* ========== CUADROS DE CITAS MEJORADOS - MENTA ========== */
       .quote-box {
         background: linear-gradient(
           135deg,
-          rgba(45, 143, 78, 0.08) 0%,
-          rgba(247, 147, 30, 0.05) 50%,
-          rgba(26, 74, 110, 0.08) 100%
+          #b8e6d4 0%,
+          #a8e0cc 50%,
+          #98d9c2 100%
         );
         border-left: 5px solid;
-        border-image: linear-gradient(180deg, #2d8f4e, #f7931e) 1;
+        border-image: linear-gradient(180deg, #2d8f4e, #1a4a6e) 1;
         padding: 25px;
         margin: 25px 0;
         border-radius: 0 16px 16px 0;
         font-style: italic;
         position: relative;
         overflow: hidden;
-        box-shadow: 0 5px 20px rgba(45, 143, 78, 0.1),
-          inset 0 0 30px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 5px 20px rgba(45, 143, 78, 0.2),
+          inset 0 0 30px rgba(255, 255, 255, 0.3);
+      }
+
+      .quote-box-compact {
+        padding: 15px;
+        margin: 12px 0;
       }
 
       .quote-box::before {
@@ -428,17 +454,29 @@
         top: -10px;
         left: 15px;
         font-size: 80px;
-        color: rgba(45, 143, 78, 0.1);
+        color: rgba(45, 143, 78, 0.15);
         font-family: Georgia, serif;
         line-height: 1;
       }
 
+      .quote-box-compact::before {
+        font-size: 50px;
+        top: -5px;
+        left: 10px;
+      }
+
       .quote-box p {
-        color: #2c3e50;
+        color: #1a4a6e;
         font-size: 1.1rem;
         line-height: 1.8;
         position: relative;
         z-index: 1;
+        font-weight: 500;
+      }
+
+      .quote-box-compact p {
+        font-size: 0.9rem;
+        line-height: 1.5;
       }
 
       /* ========== SECCIÓN NARUTO MEJORADA ========== */
@@ -458,6 +496,11 @@
         box-shadow: 0 10px 40px rgba(255, 107, 53, 0.3),
           inset 0 -5px 20px rgba(0, 0, 0, 0.1);
         animation: narutoGlow 3s ease-in-out infinite;
+      }
+
+      .naruto-quote-compact {
+        padding: 18px;
+        margin: 12px 0;
       }
 
       @keyframes narutoGlow {
@@ -483,6 +526,12 @@
         animation: ninjaFloat 3s ease-in-out infinite;
       }
 
+      .naruto-quote-compact::before {
+        font-size: 60px;
+        right: -10px;
+        top: -10px;
+      }
+
       @keyframes ninjaFloat {
         0%,
         100% {
@@ -503,6 +552,11 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
       }
 
+      .naruto-quote-compact p {
+        font-size: 1rem;
+        letter-spacing: 1px;
+      }
+
       .naruto-quote .author {
         font-size: 1rem;
         font-weight: 400;
@@ -510,6 +564,11 @@
         opacity: 0.95;
         text-transform: none;
         letter-spacing: 1px;
+      }
+
+      .naruto-quote-compact .author {
+        font-size: 0.85rem;
+        margin-top: 8px;
       }
 
       /* ========== FIRMA MEJORADA ========== */
@@ -529,6 +588,11 @@
         position: relative;
       }
 
+      .signature-compact {
+        margin-top: 15px;
+        padding-top: 12px;
+      }
+
       .signature-text {
         font-family: "Dancing Script", cursive;
         font-size: 2.2rem;
@@ -539,11 +603,20 @@
         margin-bottom: 8px;
       }
 
+      .signature-text-compact {
+        font-size: 1.6rem;
+        margin-bottom: 4px;
+      }
+
       .signature-role {
         font-size: 1.1rem;
         color: #546e7a;
         font-weight: 600;
         letter-spacing: 1px;
+      }
+
+      .signature-role-compact {
+        font-size: 0.95rem;
       }
 
       /* ========== BOTONES MEJORADOS ========== */
@@ -562,6 +635,12 @@
         text-decoration: none;
         position: relative;
         overflow: hidden;
+      }
+
+      .btn-compact {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+        margin: 5px;
       }
 
       .btn::before {
@@ -636,12 +715,22 @@
         margin-top: 30px;
       }
 
+      .nav-buttons-compact {
+        gap: 5px;
+        margin-top: 12px;
+      }
+
       /* Progress Indicator Mejorado */
       .progress-dots {
         display: flex;
         justify-content: center;
         gap: 12px;
         margin-bottom: 25px;
+      }
+
+      .progress-dots-compact {
+        gap: 8px;
+        margin-bottom: 12px;
       }
 
       .dot {
@@ -651,6 +740,11 @@
         background: linear-gradient(135deg, #ddd, #eee);
         transition: all 0.4s ease;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .dot-compact {
+        width: 10px;
+        height: 10px;
       }
 
       .dot.active {
@@ -672,6 +766,11 @@
         animation: blessingPulse 2s ease-in-out infinite;
       }
 
+      .blessing-compact {
+        font-size: 1.2rem;
+        margin: 10px 0;
+      }
+
       @keyframes blessingPulse {
         0%,
         100% {
@@ -691,6 +790,10 @@
           margin: 10px;
         }
 
+        .card-compact {
+          padding: 18px 15px;
+        }
+
         .welcome-text {
           font-size: 1.4rem;
         }
@@ -708,8 +811,16 @@
           font-size: 1.4rem;
         }
 
+        .section-title-compact {
+          font-size: 1.2rem;
+        }
+
         .message-text {
           font-size: 1rem;
+        }
+
+        .message-text-compact {
+          font-size: 0.85rem;
         }
 
         .btn {
@@ -717,8 +828,17 @@
           font-size: 1rem;
         }
 
+        .btn-compact {
+          padding: 8px 18px;
+          font-size: 0.8rem;
+        }
+
         .naruto-quote p {
           font-size: 1.1rem;
+        }
+
+        .naruto-quote-compact p {
+          font-size: 0.9rem;
         }
       }
 
@@ -853,28 +973,28 @@
       </div>
     </section>
 
-    <!-- SECCIÓN 4: REFLEXIÓN -->
+    <!-- SECCIÓN 4: REFLEXIÓN (COMPACTA) -->
     <section class="section" id="section4">
-      <div class="card">
+      <div class="card card-compact">
         <div class="card-glow"></div>
-        <div class="progress-dots">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot active"></span>
-          <span class="dot"></span>
+        <div class="progress-dots progress-dots-compact">
+          <span class="dot dot-compact"></span>
+          <span class="dot dot-compact"></span>
+          <span class="dot dot-compact"></span>
+          <span class="dot dot-compact active"></span>
+          <span class="dot dot-compact"></span>
         </div>
 
-        <h2 class="section-title">💭 Una Reflexión</h2>
+        <h2 class="section-title section-title-compact">💭 Una Reflexión</h2>
 
-        <p class="message-text">
+        <p class="message-text message-text-compact">
           Vayan por el buen camino. Sabemos que nadie es perfecto, pero eso no
           quiere decir que hagamos lo que sea. Al contrario, debemos ser
           conscientes de nuestros actos y rectificar o corregir para un buen
           vivir.
         </p>
 
-        <div class="quote-box">
+        <div class="quote-box quote-box-compact">
           <p>
             Hay días difíciles, hay momentos de cansancio, pero recuerden por
             qué empezaron. Cada estudiante que recuerda a un buen maestro es
@@ -882,65 +1002,73 @@
           </p>
         </div>
 
-        <p class="message-text" style="font-weight: 600; color: #2d8f4e">
+        <p
+          class="message-text message-text-compact"
+          style="font-weight: 600; color: #2d8f4e"
+        >
           Gracias por el acompañamiento 💪🏻🫡
         </p>
 
-        <div class="nav-buttons">
-          <button class="btn btn-secondary" onclick="goToSection(3)">
+        <div class="nav-buttons nav-buttons-compact">
+          <button
+            class="btn btn-secondary btn-compact"
+            onclick="goToSection(3)"
+          >
             ← Volver
           </button>
-          <button class="btn btn-primary" onclick="goToSection(5)">
+          <button class="btn btn-primary btn-compact" onclick="goToSection(5)">
             Ver Cierre →
           </button>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN 5: CIERRE ÉPICO -->
+    <!-- SECCIÓN 5: CIERRE ÉPICO (COMPACTA) -->
     <section class="section" id="section5">
-      <div class="card">
+      <div class="card card-compact">
         <div class="card-glow"></div>
-        <div class="progress-dots">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot active"></span>
+        <div class="progress-dots progress-dots-compact">
+          <span class="dot dot-compact"></span>
+          <span class="dot dot-compact"></span>
+          <span class="dot dot-compact"></span>
+          <span class="dot dot-compact"></span>
+          <span class="dot dot-compact active"></span>
         </div>
 
-        <h2 class="section-title">⭐ Mensaje Final</h2>
+        <h2 class="section-title section-title-compact">⭐ Mensaje Final</h2>
 
-        <div
-          class="quote-box"
-          style="border-image: linear-gradient(180deg, #f7931e, #ff6b35) 1"
-        >
+        <div class="quote-box quote-box-compact">
           <p>
             El verdadero éxito no es nunca caer, sino levantarse cada vez que
             caemos.
           </p>
         </div>
 
-        <div class="naruto-quote">
+        <div class="naruto-quote naruto-quote-compact">
           <p>"No retrocederé, ese es mi camino ninja"</p>
           <span class="author">— Naruto Uzumaki 🥷🏻</span>
         </div>
 
-        <p class="blessing">¡Bendiciones a todos! 🙌🏻</p>
+        <p class="blessing blessing-compact">¡Bendiciones a todos! 🙌🏻</p>
 
-        <div class="signature">
-          <p class="signature-text">Atentamente,</p>
-          <p class="signature-role"><strong>Orientador:</strong> Angel</p>
+        <div class="signature signature-compact">
+          <p class="signature-text signature-text-compact">Atentamente,</p>
+          <p class="signature-role signature-role-compact">
+            <strong>Orientador:</strong> Angel
+          </p>
         </div>
 
-        <div class="nav-buttons">
-          <button class="btn btn-secondary" onclick="goToSection(4)">
+        <div class="nav-buttons nav-buttons-compact">
+          <button
+            class="btn btn-secondary btn-compact"
+            onclick="goToSection(4)"
+          >
             ← Volver
           </button>
-          <button class="btn btn-share" onclick="shareContent()">
+          <button class="btn btn-share btn-compact" onclick="shareContent()">
             📤 Compartir
           </button>
-          <button class="btn btn-primary" onclick="goToSection(1)">
+          <button class="btn btn-primary btn-compact" onclick="goToSection(1)">
             🏠 Inicio
           </button>
         </div>
