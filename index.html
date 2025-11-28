@@ -52,7 +52,6 @@
         position: absolute;
         font-size: 20px;
         opacity: 0;
-        animation: none;
       }
 
       @keyframes confettiFall {
@@ -78,6 +77,109 @@
         100% {
           transform: translateY(100vh) scale(0.5);
           opacity: 0;
+        }
+      }
+
+      /* ==================== EFECTOS DE TEXTO IMPACTANTE ==================== */
+
+      /* Palabras resaltadas con color */
+      .highlight {
+        color: #2d8f4e;
+        font-weight: 700;
+        position: relative;
+      }
+
+      .highlight-orange {
+        color: #f7931e;
+        font-weight: 700;
+      }
+
+      .highlight-blue {
+        color: #1a4a6e;
+        font-weight: 700;
+      }
+
+      /* Palabras destacadas sin fondo */
+      .marker {
+        color: #f7931e;
+        font-weight: 600;
+      }
+
+      .marker-green {
+        color: #2d8f4e;
+        font-weight: 600;
+      }
+
+      /* Texto con resplandor */
+      .glow-text {
+        text-shadow: 0 0 10px rgba(45, 143, 78, 0.5),
+          0 0 20px rgba(45, 143, 78, 0.3);
+        animation: textGlow 2s ease-in-out infinite;
+      }
+
+      @keyframes textGlow {
+        0%,
+        100% {
+          text-shadow: 0 0 10px rgba(45, 143, 78, 0.5),
+            0 0 20px rgba(45, 143, 78, 0.3);
+        }
+        50% {
+          text-shadow: 0 0 20px rgba(45, 143, 78, 0.8),
+            0 0 40px rgba(45, 143, 78, 0.5);
+        }
+      }
+
+      /* Texto que pulsa */
+      .pulse-text {
+        animation: textPulse 2.5s ease-in-out infinite;
+      }
+
+      @keyframes textPulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.02);
+        }
+      }
+
+      /* Texto con gradiente animado */
+      .gradient-text {
+        background: linear-gradient(90deg, #2d8f4e, #f7931e, #1a4a6e, #2d8f4e);
+        background-size: 300% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradientMove 4s ease infinite;
+        font-weight: 700;
+      }
+
+      @keyframes gradientMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Emoji animado */
+      .emoji-float {
+        display: inline-block;
+        animation: emojiFloat 2s ease-in-out infinite;
+      }
+
+      @keyframes emojiFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
         }
       }
 
@@ -129,7 +231,6 @@
         background-clip: padding-box;
       }
 
-      /* Borde degradado animado */
       .card::before {
         content: "";
         position: absolute;
@@ -178,7 +279,6 @@
         }
       }
 
-      /* Efecto de luz */
       .card-glow {
         position: absolute;
         top: -50%;
@@ -418,6 +518,19 @@
         overflow: hidden;
         box-shadow: 0 8px 30px rgba(45, 143, 78, 0.25),
           inset 0 0 40px rgba(255, 255, 255, 0.4);
+        animation: quoteBoxPulse 3s ease-in-out infinite;
+      }
+
+      @keyframes quoteBoxPulse {
+        0%,
+        100% {
+          box-shadow: 0 8px 30px rgba(45, 143, 78, 0.25),
+            inset 0 0 40px rgba(255, 255, 255, 0.4);
+        }
+        50% {
+          box-shadow: 0 12px 40px rgba(45, 143, 78, 0.35),
+            inset 0 0 50px rgba(255, 255, 255, 0.5);
+        }
       }
 
       .quote-box::before {
@@ -681,7 +794,6 @@
           0 0 30px rgba(45, 143, 78, 0.4);
       }
 
-      /* Pulse animation */
       .pulse {
         animation: pulse 2s infinite;
       }
@@ -861,7 +973,7 @@
         }
       }
 
-      /* ==================== MÓVIL MUY PEQUEÑO (max-width: 360px) ==================== */
+      /* ==================== MÓVIL MUY PEQUEÑO ==================== */
 
       @media (max-width: 360px) {
         .section {
@@ -914,7 +1026,7 @@
         }
       }
 
-      /* ==================== TABLET (769px - 1024px) ==================== */
+      /* ==================== TABLET ==================== */
 
       @media (min-width: 769px) and (max-width: 1024px) {
         .card {
@@ -938,7 +1050,7 @@
         }
       }
 
-      /* ==================== LAPTOP GRANDE (min-width: 1200px) ==================== */
+      /* ==================== LAPTOP GRANDE ==================== */
 
       @media (min-width: 1200px) {
         .card {
@@ -1001,8 +1113,10 @@
           class="portada-image"
         />
 
-        <p class="welcome-text">Tiene un mensaje especial</p>
-        <p class="welcome-highlight">para ustedes...</p>
+        <p class="welcome-text">
+          Tiene un <span class="gradient-text">mensaje especial</span>
+        </p>
+        <p class="welcome-highlight">para usted...!</p>
 
         <button class="btn btn-primary pulse" onclick="goToSection(2)">
           ✉️ Abrir Mensaje
@@ -1022,22 +1136,25 @@
           <span class="dot"></span>
         </div>
 
-        <h2 class="section-title">💚 Gracias por Todo</h2>
+        <h2 class="section-title">🤝 Gracias por Todo 🤝</h2>
 
         <p class="message-text">
-          Fue un gusto haber compartido con ustedes durante este tiempo que
-          hemos estado juntos. De ustedes he aprendido muchas cosas, por lo cual
-          estoy profundamente agradecido.
+          Fue un <span class="marker">gusto</span> haber compartido con ustedes
+          durante este tiempo que hemos formado este pequeño equipo. De ustedes
+          he <span class="highlight">aprendido muchas cosas</span>, por lo cual
+          estoy <span class="marker-green">profundamente agradecido</span>.
         </p>
 
-        <div class="quote-box">
+        <div class="quote-box pulse-text">
           <p>
-            Cada día fue una oportunidad de crecer juntos. Gracias por
-            permitirme ser parte de este camino.
+            <span class="glow-text"
+              >Cada día fue una oportunidad de crecer y aprender.</span
+            >
+            Gracias por permitirme ser parte de este camino.
           </p>
         </div>
 
-        <div class="emoji-big">🙏🏻</div>
+        <div class="emoji-big"><span class="emoji-float">🙏🏻</span></div>
 
         <div class="nav-buttons">
           <button class="btn btn-secondary" onclick="goToSection(1)">
@@ -1062,19 +1179,27 @@
           <span class="dot"></span>
         </div>
 
-        <h2 class="section-title">🏖️ ¡Felices Vacaciones!</h2>
+        <h2 class="section-title">🏖️ ¡Felices Vacaciones! 🏖️</h2>
 
         <p class="message-text">
-          Ahora ha llegado el momento de irse a casa. Les deseo lo mejor, que la
-          pasen muy bien junto a sus familiares.
+          Ahora ha llegado el momento de
+          <span class="highlight">irse a casa</span>. Les deseo
+          <span class="marker">lo mejor</span>, que la pasen muy bien junto a
+          sus <span class="highlight-blue">familiares</span>.
         </p>
 
         <p class="message-text">
-          Disfruten este tiempo de descanso, recarguen energías y compartan
-          momentos especiales con sus seres queridos. ¡Se lo merecen!
+          Disfruten este tiempo de <span class="marker-green">descanso</span>,
+          recarguen energías y compartan
+          <span class="highlight-orange">momentos especiales</span> con sus
+          seres queridos. <span class="glow-text">¡Se lo merecen!</span>
         </p>
 
-        <div class="emoji-big">🎄✨🏡</div>
+        <div class="emoji-big">
+          <span class="emoji-float">🎄</span
+          ><span class="emoji-float" style="animation-delay: 0.3s">✨</span
+          ><span class="emoji-float" style="animation-delay: 0.6s">🏡</span>
+        </div>
 
         <div class="nav-buttons">
           <button class="btn btn-secondary" onclick="goToSection(2)">
@@ -1102,22 +1227,26 @@
         <h2 class="section-title">💭 Una Reflexión</h2>
 
         <p class="message-text">
-          Vayan por el buen camino. Sabemos que nadie es perfecto, pero eso no
-          quiere decir que hagamos lo que sea. Al contrario, debemos ser
-          conscientes de nuestros actos y rectificar o corregir para un buen
+          Vayan por el <span class="highlight">buen camino</span>. Sabemos que
+          <span class="marker">nadie es perfecto</span>, pero eso no quiere
+          decir que hagamos lo que sea. Al contrario, debemos ser
+          <span class="highlight-blue">conscientes de nuestros actos</span> y
+          <span class="marker-green">rectificar o corregir</span> para un buen
           vivir.
         </p>
 
-        <div class="quote-box">
+        <div class="quote-box pulse-text">
           <p>
-            Hay días difíciles, hay momentos de cansancio, pero recuerden por
-            qué empezaron. Cada estudiante que recuerda a un buen maestro es
-            prueba de que su trabajo vale la pena.
+            Hay días difíciles, hay momentos de cansancio, pero
+            <span class="glow-text">recuerden por qué empezaron</span>. Cada
+            estudiante que recuerda a un buen maestro es prueba de que
+            <span class="gradient-text">su trabajo vale la pena</span>.
           </p>
         </div>
 
         <p class="message-text" style="font-weight: 600; color: #2d8f4e">
-          Gracias por el acompañamiento 💪🏻🫡
+          Gracias por el acompañamiento <span class="emoji-float">💪🏻</span
+          ><span class="emoji-float" style="animation-delay: 0.2s">🫡</span>
         </p>
 
         <div class="nav-buttons">
@@ -1145,23 +1274,32 @@
 
         <h2 class="section-title">⭐ Mensaje Final</h2>
 
-        <div class="quote-box">
+        <div class="quote-box pulse-text">
           <p>
-            El verdadero éxito no es nunca caer, sino levantarse cada vez que
-            caemos.
+            El verdadero <span class="highlight-orange">éxito</span> no es nunca
+            caer, sino
+            <span class="glow-text">levantarse cada vez que caemos</span>.
           </p>
         </div>
 
         <div class="naruto-quote">
-          <p>"No retrocederé, ese es mi camino ninja"</p>
-          <span class="author">— Naruto Uzumaki 🥷🏻</span>
+          <p>
+            "No retrocederé, ese es mi camino,
+            <span style="text-shadow: 0 0 20px rgba(255, 255, 255, 0.8)"></span>ninja</span
+            >"
+          </p>
+          <span class="author"
+            >— Naruto Uzumaki <span class="emoji-float">🥷🏻</span></span
+          >
         </div>
 
-        <p class="blessing">¡Bendiciones a todos! 🙌🏻</p>
+        <p class="blessing">
+          ¡Bendiciones a todos! <span class="emoji-float">🙌🏻</span>
+        </p>
 
         <div class="signature">
           <p class="signature-text">Atentamente,</p>
-          <p class="signature-role"><strong>Orientador:</strong> Angel</p>
+          <p class="signature-role"><strong>Orientador:</strong> 🥷🏻🐉 Angel 🐉🥷🏻</p>
         </div>
 
         <div class="nav-buttons">
@@ -1179,7 +1317,10 @@
     </section>
 
     <script>
-      function createConfetti() {
+      let confettiInterval = null;
+      let starsInterval = null;
+
+      function createSingleConfetti() {
         const particles = document.getElementById("particles");
         const colors = [
           "#2d8f4e",
@@ -1192,63 +1333,101 @@
           "#98FB98",
         ];
         const isMobile = window.innerWidth <= 768;
-        const count = isMobile ? 40 : 80;
 
-        for (let i = 0; i < count; i++) {
-          setTimeout(() => {
-            const confetti = document.createElement("div");
-            confetti.className = "confetti";
-            confetti.style.left = Math.random() * 100 + "vw";
-            confetti.style.background =
-              colors[Math.floor(Math.random() * colors.length)];
-            confetti.style.borderRadius = Math.random() > 0.5 ? "50%" : "0";
-            const size = isMobile
-              ? Math.random() * 6 + 3
-              : Math.random() * 12 + 6;
-            confetti.style.width = size + "px";
-            confetti.style.height = size + "px";
-            confetti.style.animation = `confettiFall ${
-              Math.random() * 3 + 2
-            }s linear forwards`;
-            particles.appendChild(confetti);
-            setTimeout(() => confetti.remove(), 5000);
-          }, i * 40);
-        }
+        const confetti = document.createElement("div");
+        confetti.className = "confetti";
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.background =
+          colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.borderRadius = Math.random() > 0.5 ? "50%" : "0";
+        const size = isMobile ? Math.random() * 6 + 3 : Math.random() * 12 + 6;
+        confetti.style.width = size + "px";
+        confetti.style.height = size + "px";
+        confetti.style.animation = `confettiFall ${
+          Math.random() * 3 + 2
+        }s linear forwards`;
+        particles.appendChild(confetti);
+        setTimeout(() => confetti.remove(), 5000);
       }
 
-      function createStars() {
+      function createSingleStar() {
         const particles = document.getElementById("particles");
         const starEmojis = ["⭐", "🌟", "✨", "💫", "🌠", "🎉", "🎊"];
         const isMobile = window.innerWidth <= 768;
-        const count = isMobile ? 25 : 50;
 
-        for (let i = 0; i < count; i++) {
-          setTimeout(() => {
-            const star = document.createElement("div");
-            star.className = "star";
-            star.textContent =
-              starEmojis[Math.floor(Math.random() * starEmojis.length)];
-            star.style.left = Math.random() * 100 + "vw";
-            const size = isMobile
-              ? Math.random() * 15 + 10
-              : Math.random() * 25 + 15;
-            star.style.fontSize = size + "px";
-            star.style.animation = `starFall ${
-              Math.random() * 3 + 2
-            }s linear forwards`;
-            particles.appendChild(star);
-            setTimeout(() => star.remove(), 5000);
-          }, i * 60);
+        const star = document.createElement("div");
+        star.className = "star";
+        star.textContent =
+          starEmojis[Math.floor(Math.random() * starEmojis.length)];
+        star.style.left = Math.random() * 100 + "vw";
+        const size = isMobile
+          ? Math.random() * 15 + 10
+          : Math.random() * 25 + 15;
+        star.style.fontSize = size + "px";
+        star.style.animation = `starFall ${
+          Math.random() * 3 + 2
+        }s linear forwards`;
+        particles.appendChild(star);
+        setTimeout(() => star.remove(), 5000);
+      }
+
+      function startConfetti() {
+        if (confettiInterval) return;
+        // Crear ráfaga inicial
+        for (let i = 0; i < 20; i++) {
+          setTimeout(createSingleConfetti, i * 50);
+        }
+        // Continuar cayendo
+        confettiInterval = setInterval(() => {
+          createSingleConfetti();
+        }, 150);
+      }
+
+      function stopConfetti() {
+        if (confettiInterval) {
+          clearInterval(confettiInterval);
+          confettiInterval = null;
+        }
+      }
+
+      function startStars() {
+        if (starsInterval) return;
+        // Crear ráfaga inicial
+        for (let i = 0; i < 15; i++) {
+          setTimeout(createSingleStar, i * 80);
+        }
+        // Continuar cayendo
+        starsInterval = setInterval(() => {
+          createSingleStar();
+        }, 200);
+      }
+
+      function stopStars() {
+        if (starsInterval) {
+          clearInterval(starsInterval);
+          starsInterval = null;
         }
       }
 
       function goToSection(num) {
+        // Detener todos los efectos
+        stopConfetti();
+        stopStars();
+
+        // Cambiar sección
         document
           .querySelectorAll(".section")
           .forEach((s) => s.classList.remove("active"));
         document.getElementById("section" + num).classList.add("active");
-        if (num === 1) setTimeout(createConfetti, 300);
-        if (num === 5) setTimeout(createStars, 300);
+
+        // Iniciar efectos según la sección
+        if (num === 1) {
+          setTimeout(startConfetti, 300);
+        }
+        if (num === 5) {
+          setTimeout(startStars, 300);
+        }
+
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
 
@@ -1278,8 +1457,9 @@
         }
       }
 
+      // Iniciar con confeti continuo
       window.onload = function () {
-        setTimeout(createConfetti, 500);
+        setTimeout(startConfetti, 500);
       };
     </script>
   </body>
