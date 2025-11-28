@@ -81,11 +81,12 @@
         }
       }
 
-      /* Sections */
+      /* ==================== ESTILOS BASE (LAPTOP/DESKTOP) ==================== */
+
       .section {
         display: none;
         min-height: 100vh;
-        padding: 20px;
+        padding: 40px;
         justify-content: center;
         align-items: center;
         animation: fadeIn 0.8s ease-out;
@@ -106,7 +107,7 @@
         }
       }
 
-      /* ========== CARD STYLES MEJORADO ========== */
+      /* Card Styles - LAPTOP */
       .card {
         background: linear-gradient(
           145deg,
@@ -114,23 +115,18 @@
           #e0f2ec 50%,
           #d5efe6 100%
         );
-        border-radius: 24px;
-        padding: 40px;
-        max-width: 600px;
+        border-radius: 30px;
+        padding: 50px 60px;
+        max-width: 700px;
         width: 100%;
-        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3),
-          0 0 40px rgba(45, 143, 78, 0.15),
-          inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        box-shadow: 0 30px 100px rgba(0, 0, 0, 0.35),
+          0 0 50px rgba(45, 143, 78, 0.2),
+          inset 0 1px 0 rgba(255, 255, 255, 0.9);
         text-align: center;
         position: relative;
         overflow: hidden;
         border: 3px solid transparent;
         background-clip: padding-box;
-      }
-
-      /* Card compacta para reflexión y final */
-      .card-compact {
-        padding: 25px 20px;
       }
 
       /* Borde degradado animado */
@@ -150,7 +146,7 @@
           #2d8f4e
         );
         background-size: 300% 300%;
-        border-radius: 26px;
+        border-radius: 32px;
         z-index: -1;
         animation: borderGlow 4s ease infinite;
       }
@@ -168,7 +164,7 @@
           #e0f2ec 50%,
           #d5efe6 100%
         );
-        border-radius: 21px;
+        border-radius: 27px;
         z-index: -1;
       }
 
@@ -182,7 +178,7 @@
         }
       }
 
-      /* Efecto de luz en esquina */
+      /* Efecto de luz */
       .card-glow {
         position: absolute;
         top: -50%;
@@ -214,9 +210,9 @@
         }
       }
 
-      /* ========== TÍTULO ANIMADO CON BRILLO ========== */
+      /* Título Principal - LAPTOP */
       .school-name {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 800;
         background: linear-gradient(
           135deg,
@@ -228,13 +224,12 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        margin-bottom: 20px;
-        letter-spacing: 2px;
+        margin-bottom: 25px;
+        letter-spacing: 3px;
         text-transform: uppercase;
         animation: titleShine 3s linear infinite,
           titleFloat 2s ease-in-out infinite;
         position: relative;
-        text-shadow: 0 0 30px rgba(45, 143, 78, 0.3);
       }
 
       @keyframes titleShine {
@@ -252,11 +247,10 @@
           transform: translateY(0);
         }
         50% {
-          transform: translateY(-5px);
+          transform: translateY(-8px);
         }
       }
 
-      /* Efecto de resplandor detrás del título */
       .school-name::before {
         content: "CENTRO EDUCATIVO PARTICULAR DON BOSCO";
         position: absolute;
@@ -267,48 +261,47 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        filter: blur(8px);
-        opacity: 0.5;
+        filter: blur(10px);
+        opacity: 0.4;
         z-index: -1;
-        animation: titleFloat 2s ease-in-out infinite;
       }
 
-      /* ========== IMAGEN MEJORADA ========== */
+      /* Imagen - LAPTOP */
       .portada-image {
         width: 100%;
-        max-width: 500px;
-        border-radius: 16px;
-        margin-bottom: 25px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25),
-          0 0 20px rgba(45, 143, 78, 0.2);
-        border: 3px solid rgba(45, 143, 78, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 550px;
+        border-radius: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3),
+          0 0 25px rgba(45, 143, 78, 0.25);
+        border: 4px solid rgba(45, 143, 78, 0.3);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
       }
 
       .portada-image:hover {
-        transform: scale(1.02);
-        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3),
-          0 0 30px rgba(45, 143, 78, 0.3);
+        transform: scale(1.03) rotate(0.5deg);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35),
+          0 0 40px rgba(45, 143, 78, 0.35);
       }
 
-      /* ========== TEXTOS DE BIENVENIDA ========== */
+      /* Textos de Bienvenida - LAPTOP */
       .welcome-text {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         font-weight: 400;
         color: #2c3e50;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         opacity: 0;
         animation: typeIn 1s ease-out 0.5s forwards;
       }
 
       .welcome-highlight {
         font-family: "Dancing Script", cursive;
-        font-size: 2.5rem;
+        font-size: 3rem;
         background: linear-gradient(135deg, #2d8f4e, #f7931e);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        margin-bottom: 30px;
+        margin-bottom: 35px;
         opacity: 0;
         animation: typeIn 1s ease-out 1s forwards,
           pulseGlow 2s ease-in-out infinite 1.5s;
@@ -328,30 +321,25 @@
       @keyframes pulseGlow {
         0%,
         100% {
-          filter: drop-shadow(0 0 5px rgba(45, 143, 78, 0.3));
+          filter: drop-shadow(0 0 8px rgba(45, 143, 78, 0.4));
         }
         50% {
-          filter: drop-shadow(0 0 15px rgba(45, 143, 78, 0.6));
+          filter: drop-shadow(0 0 20px rgba(45, 143, 78, 0.7));
         }
       }
 
-      /* ========== TÍTULOS DE SECCIÓN ========== */
+      /* Títulos de Sección - LAPTOP */
       .section-title {
-        font-size: 1.7rem;
+        font-size: 2rem;
         font-weight: 700;
         background: linear-gradient(135deg, #1a4a6e, #2d8f4e);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         position: relative;
         display: inline-block;
         animation: titlePulse 3s ease-in-out infinite;
-      }
-
-      .section-title-compact {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
       }
 
       @keyframes titlePulse {
@@ -367,50 +355,39 @@
       .section-title::after {
         content: "";
         position: absolute;
-        bottom: -10px;
+        bottom: -12px;
         left: 50%;
         transform: translateX(-50%);
-        width: 80px;
-        height: 4px;
+        width: 100px;
+        height: 5px;
         background: linear-gradient(90deg, #2d8f4e, #f7931e, #1a4a6e);
-        border-radius: 2px;
+        border-radius: 3px;
         animation: lineGlow 2s ease-in-out infinite;
       }
 
       @keyframes lineGlow {
         0%,
         100% {
-          box-shadow: 0 0 5px rgba(45, 143, 78, 0.5);
+          box-shadow: 0 0 8px rgba(45, 143, 78, 0.6);
         }
         50% {
-          box-shadow: 0 0 15px rgba(45, 143, 78, 0.8);
+          box-shadow: 0 0 20px rgba(45, 143, 78, 0.9);
         }
       }
 
-      /* ========== TEXTOS DE MENSAJE ========== */
+      /* Textos de Mensaje - LAPTOP */
       .message-text {
-        font-size: 1.1rem;
-        line-height: 1.9;
+        font-size: 1.25rem;
+        line-height: 2;
         color: #34495e;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         text-align: justify;
       }
 
-      .message-text-compact {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        margin-bottom: 12px;
-      }
-
       .emoji-big {
-        font-size: 3rem;
-        margin: 20px 0;
+        font-size: 4rem;
+        margin: 30px 0;
         animation: bounce 2s ease-in-out infinite;
-      }
-
-      .emoji-compact {
-        font-size: 2rem;
-        margin: 10px 0;
       }
 
       @keyframes bounce {
@@ -419,11 +396,11 @@
           transform: translateY(0);
         }
         50% {
-          transform: translateY(-10px);
+          transform: translateY(-15px);
         }
       }
 
-      /* ========== CUADROS DE CITAS MEJORADOS - MENTA ========== */
+      /* Cuadros de Citas - LAPTOP */
       .quote-box {
         background: linear-gradient(
           135deg,
@@ -431,55 +408,39 @@
           #a8e0cc 50%,
           #98d9c2 100%
         );
-        border-left: 5px solid;
+        border-left: 6px solid;
         border-image: linear-gradient(180deg, #2d8f4e, #1a4a6e) 1;
-        padding: 25px;
-        margin: 25px 0;
-        border-radius: 0 16px 16px 0;
+        padding: 30px 35px;
+        margin: 30px 0;
+        border-radius: 0 20px 20px 0;
         font-style: italic;
         position: relative;
         overflow: hidden;
-        box-shadow: 0 5px 20px rgba(45, 143, 78, 0.2),
-          inset 0 0 30px rgba(255, 255, 255, 0.3);
-      }
-
-      .quote-box-compact {
-        padding: 15px;
-        margin: 12px 0;
+        box-shadow: 0 8px 30px rgba(45, 143, 78, 0.25),
+          inset 0 0 40px rgba(255, 255, 255, 0.4);
       }
 
       .quote-box::before {
         content: '"';
         position: absolute;
-        top: -10px;
-        left: 15px;
-        font-size: 80px;
+        top: -15px;
+        left: 20px;
+        font-size: 100px;
         color: rgba(45, 143, 78, 0.15);
         font-family: Georgia, serif;
         line-height: 1;
       }
 
-      .quote-box-compact::before {
-        font-size: 50px;
-        top: -5px;
-        left: 10px;
-      }
-
       .quote-box p {
         color: #1a4a6e;
-        font-size: 1.1rem;
-        line-height: 1.8;
+        font-size: 1.2rem;
+        line-height: 1.9;
         position: relative;
         z-index: 1;
         font-weight: 500;
       }
 
-      .quote-box-compact p {
-        font-size: 0.9rem;
-        line-height: 1.5;
-      }
-
-      /* ========== SECCIÓN NARUTO MEJORADA ========== */
+      /* Sección Naruto - LAPTOP */
       .naruto-quote {
         background: linear-gradient(
           135deg,
@@ -488,48 +449,37 @@
           #ffb347 100%
         );
         color: white;
-        padding: 30px;
-        border-radius: 20px;
-        margin: 25px 0;
+        padding: 35px 40px;
+        border-radius: 24px;
+        margin: 30px 0;
         position: relative;
         overflow: hidden;
-        box-shadow: 0 10px 40px rgba(255, 107, 53, 0.3),
-          inset 0 -5px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 15px 50px rgba(255, 107, 53, 0.35),
+          inset 0 -5px 25px rgba(0, 0, 0, 0.1);
         animation: narutoGlow 3s ease-in-out infinite;
-      }
-
-      .naruto-quote-compact {
-        padding: 18px;
-        margin: 12px 0;
       }
 
       @keyframes narutoGlow {
         0%,
         100% {
-          box-shadow: 0 10px 40px rgba(255, 107, 53, 0.3),
-            inset 0 -5px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 15px 50px rgba(255, 107, 53, 0.35),
+            inset 0 -5px 25px rgba(0, 0, 0, 0.1);
         }
         50% {
-          box-shadow: 0 15px 50px rgba(255, 107, 53, 0.5),
-            inset 0 -5px 20px rgba(0, 0, 0, 0.1),
-            0 0 30px rgba(247, 147, 30, 0.4);
+          box-shadow: 0 20px 60px rgba(255, 107, 53, 0.5),
+            inset 0 -5px 25px rgba(0, 0, 0, 0.1),
+            0 0 40px rgba(247, 147, 30, 0.5);
         }
       }
 
       .naruto-quote::before {
         content: "🥷🏻";
         position: absolute;
-        font-size: 100px;
+        font-size: 120px;
         opacity: 0.15;
-        right: -15px;
-        top: -15px;
+        right: -20px;
+        top: -20px;
         animation: ninjaFloat 3s ease-in-out infinite;
-      }
-
-      .naruto-quote-compact::before {
-        font-size: 60px;
-        right: -10px;
-        top: -10px;
       }
 
       @keyframes ninjaFloat {
@@ -538,43 +488,33 @@
           transform: translateY(0) rotate(0deg);
         }
         50% {
-          transform: translateY(-10px) rotate(5deg);
+          transform: translateY(-15px) rotate(5deg);
         }
       }
 
       .naruto-quote p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
         position: relative;
         z-index: 1;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-      }
-
-      .naruto-quote-compact p {
-        font-size: 1rem;
-        letter-spacing: 1px;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
       }
 
       .naruto-quote .author {
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 400;
-        margin-top: 15px;
+        margin-top: 18px;
         opacity: 0.95;
         text-transform: none;
         letter-spacing: 1px;
       }
 
-      .naruto-quote-compact .author {
-        font-size: 0.85rem;
-        margin-top: 8px;
-      }
-
-      /* ========== FIRMA MEJORADA ========== */
+      /* Firma - LAPTOP */
       .signature {
-        margin-top: 35px;
-        padding-top: 25px;
+        margin-top: 40px;
+        padding-top: 30px;
         border-top: 3px solid transparent;
         border-image: linear-gradient(
             90deg,
@@ -585,62 +525,65 @@
             transparent
           )
           1;
-        position: relative;
-      }
-
-      .signature-compact {
-        margin-top: 15px;
-        padding-top: 12px;
       }
 
       .signature-text {
         font-family: "Dancing Script", cursive;
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         background: linear-gradient(135deg, #1a4a6e, #2d8f4e);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        margin-bottom: 8px;
-      }
-
-      .signature-text-compact {
-        font-size: 1.6rem;
-        margin-bottom: 4px;
+        margin-bottom: 10px;
       }
 
       .signature-role {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         color: #546e7a;
         font-weight: 600;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
       }
 
-      .signature-role-compact {
-        font-size: 0.95rem;
+      /* Blessing - LAPTOP */
+      .blessing {
+        font-size: 1.8rem;
+        background: linear-gradient(135deg, #2d8f4e, #f7931e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 700;
+        margin: 30px 0;
+        animation: blessingPulse 2s ease-in-out infinite;
       }
 
-      /* ========== BOTONES MEJORADOS ========== */
+      @keyframes blessingPulse {
+        0%,
+        100% {
+          transform: scale(1);
+          filter: drop-shadow(0 0 8px rgba(45, 143, 78, 0.4));
+        }
+        50% {
+          transform: scale(1.05);
+          filter: drop-shadow(0 0 20px rgba(45, 143, 78, 0.6));
+        }
+      }
+
+      /* Botones - LAPTOP */
       .btn {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
-        padding: 16px 38px;
-        font-size: 1.1rem;
+        gap: 12px;
+        padding: 18px 45px;
+        font-size: 1.15rem;
         font-weight: 600;
         border: none;
         border-radius: 50px;
         cursor: pointer;
         transition: all 0.3s ease;
-        margin: 10px;
+        margin: 12px;
         text-decoration: none;
         position: relative;
         overflow: hidden;
-      }
-
-      .btn-compact {
-        padding: 10px 22px;
-        font-size: 0.9rem;
-        margin: 5px;
       }
 
       .btn::before {
@@ -653,7 +596,7 @@
         background: linear-gradient(
           90deg,
           transparent,
-          rgba(255, 255, 255, 0.3),
+          rgba(255, 255, 255, 0.4),
           transparent
         );
         transition: left 0.5s ease;
@@ -666,14 +609,14 @@
       .btn-primary {
         background: linear-gradient(135deg, #2d8f4e 0%, #1a4a6e 100%);
         color: white;
-        box-shadow: 0 8px 25px rgba(45, 143, 78, 0.35),
-          0 0 20px rgba(45, 143, 78, 0.2);
+        box-shadow: 0 10px 35px rgba(45, 143, 78, 0.4),
+          0 0 25px rgba(45, 143, 78, 0.25);
       }
 
       .btn-primary:hover {
-        transform: translateY(-4px) scale(1.02);
-        box-shadow: 0 15px 40px rgba(45, 143, 78, 0.45),
-          0 0 30px rgba(45, 143, 78, 0.3);
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 18px 50px rgba(45, 143, 78, 0.5),
+          0 0 40px rgba(45, 143, 78, 0.35);
       }
 
       .btn-secondary {
@@ -690,159 +633,55 @@
         background: linear-gradient(135deg, #1a4a6e, #2d8f4e);
         color: white;
         border-color: transparent;
-        transform: translateY(-3px);
+        transform: translateY(-4px);
       }
 
       .btn-share {
         background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
         color: white;
-        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35),
-          0 0 20px rgba(37, 211, 102, 0.2);
+        box-shadow: 0 10px 35px rgba(37, 211, 102, 0.4),
+          0 0 25px rgba(37, 211, 102, 0.25);
       }
 
       .btn-share:hover {
-        transform: translateY(-4px) scale(1.02);
-        box-shadow: 0 15px 40px rgba(37, 211, 102, 0.45),
-          0 0 30px rgba(37, 211, 102, 0.3);
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 18px 50px rgba(37, 211, 102, 0.5),
+          0 0 40px rgba(37, 211, 102, 0.35);
       }
 
-      /* Navigation */
       .nav-buttons {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
-        margin-top: 30px;
+        gap: 15px;
+        margin-top: 35px;
       }
 
-      .nav-buttons-compact {
-        gap: 5px;
-        margin-top: 12px;
-      }
-
-      /* Progress Indicator Mejorado */
+      /* Progress Dots - LAPTOP */
       .progress-dots {
         display: flex;
         justify-content: center;
-        gap: 12px;
-        margin-bottom: 25px;
-      }
-
-      .progress-dots-compact {
-        gap: 8px;
-        margin-bottom: 12px;
+        gap: 15px;
+        margin-bottom: 30px;
       }
 
       .dot {
-        width: 14px;
-        height: 14px;
+        width: 16px;
+        height: 16px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #ddd, #eee);
+        background: linear-gradient(135deg, #ccc, #ddd);
         transition: all 0.4s ease;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      .dot-compact {
-        width: 10px;
-        height: 10px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
       }
 
       .dot.active {
         background: linear-gradient(135deg, #2d8f4e, #1a4a6e);
-        transform: scale(1.3);
-        box-shadow: 0 0 10px rgba(45, 143, 78, 0.5),
-          0 0 20px rgba(45, 143, 78, 0.3);
+        transform: scale(1.4);
+        box-shadow: 0 0 15px rgba(45, 143, 78, 0.6),
+          0 0 30px rgba(45, 143, 78, 0.4);
       }
 
-      /* Blessing Section */
-      .blessing {
-        font-size: 1.5rem;
-        background: linear-gradient(135deg, #2d8f4e, #f7931e);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-weight: 700;
-        margin: 25px 0;
-        animation: blessingPulse 2s ease-in-out infinite;
-      }
-
-      .blessing-compact {
-        font-size: 1.2rem;
-        margin: 10px 0;
-      }
-
-      @keyframes blessingPulse {
-        0%,
-        100% {
-          transform: scale(1);
-          filter: drop-shadow(0 0 5px rgba(45, 143, 78, 0.3));
-        }
-        50% {
-          transform: scale(1.03);
-          filter: drop-shadow(0 0 15px rgba(45, 143, 78, 0.5));
-        }
-      }
-
-      /* ========== RESPONSIVE ========== */
-      @media (max-width: 600px) {
-        .card {
-          padding: 25px 20px;
-          margin: 10px;
-        }
-
-        .card-compact {
-          padding: 18px 15px;
-        }
-
-        .welcome-text {
-          font-size: 1.4rem;
-        }
-
-        .welcome-highlight {
-          font-size: 2rem;
-        }
-
-        .school-name {
-          font-size: 1.2rem;
-          letter-spacing: 1px;
-        }
-
-        .section-title {
-          font-size: 1.4rem;
-        }
-
-        .section-title-compact {
-          font-size: 1.2rem;
-        }
-
-        .message-text {
-          font-size: 1rem;
-        }
-
-        .message-text-compact {
-          font-size: 0.85rem;
-        }
-
-        .btn {
-          padding: 12px 25px;
-          font-size: 1rem;
-        }
-
-        .btn-compact {
-          padding: 8px 18px;
-          font-size: 0.8rem;
-        }
-
-        .naruto-quote p {
-          font-size: 1.1rem;
-        }
-
-        .naruto-quote-compact p {
-          font-size: 0.9rem;
-        }
-      }
-
-      /* Pulse animation for buttons */
+      /* Pulse animation */
       .pulse {
         animation: pulse 2s infinite;
       }
@@ -851,13 +690,290 @@
         0%,
         100% {
           transform: scale(1);
-          box-shadow: 0 8px 25px rgba(45, 143, 78, 0.35),
-            0 0 20px rgba(45, 143, 78, 0.2);
+          box-shadow: 0 10px 35px rgba(45, 143, 78, 0.4),
+            0 0 25px rgba(45, 143, 78, 0.25);
         }
         50% {
-          transform: scale(1.03);
-          box-shadow: 0 12px 35px rgba(45, 143, 78, 0.45),
-            0 0 30px rgba(45, 143, 78, 0.3);
+          transform: scale(1.05);
+          box-shadow: 0 15px 45px rgba(45, 143, 78, 0.5),
+            0 0 35px rgba(45, 143, 78, 0.35);
+        }
+      }
+
+      /* ==================== ESTILOS MÓVIL (max-width: 768px) ==================== */
+
+      @media (max-width: 768px) {
+        .section {
+          padding: 10px;
+          min-height: 100vh;
+          min-height: 100dvh;
+        }
+
+        .card {
+          border-radius: 18px;
+          padding: 18px 15px;
+          max-width: 100%;
+          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3),
+            0 0 20px rgba(45, 143, 78, 0.15);
+        }
+
+        .card::before {
+          border-radius: 20px;
+        }
+        .card::after {
+          border-radius: 15px;
+        }
+
+        .school-name {
+          font-size: 0.9rem;
+          letter-spacing: 0.5px;
+          margin-bottom: 10px;
+        }
+
+        .school-name::before {
+          content: "CENTRO EDUCATIVO PARTICULAR DON BOSCO";
+          filter: blur(5px);
+        }
+
+        .portada-image {
+          max-width: 100%;
+          border-radius: 10px;
+          margin-bottom: 12px;
+          border: 2px solid rgba(45, 143, 78, 0.3);
+        }
+
+        .welcome-text {
+          font-size: 1.1rem;
+          margin-bottom: 5px;
+        }
+
+        .welcome-highlight {
+          font-size: 1.6rem;
+          margin-bottom: 15px;
+        }
+
+        .section-title {
+          font-size: 1.2rem;
+          margin-bottom: 12px;
+        }
+
+        .section-title::after {
+          width: 50px;
+          height: 3px;
+          bottom: -6px;
+        }
+
+        .message-text {
+          font-size: 0.85rem;
+          line-height: 1.55;
+          margin-bottom: 10px;
+        }
+
+        .emoji-big {
+          font-size: 2rem;
+          margin: 10px 0;
+        }
+
+        .quote-box {
+          padding: 12px 14px;
+          margin: 10px 0;
+          border-radius: 0 10px 10px 0;
+          border-left-width: 4px;
+        }
+
+        .quote-box::before {
+          font-size: 40px;
+          top: -5px;
+          left: 8px;
+        }
+
+        .quote-box p {
+          font-size: 0.8rem;
+          line-height: 1.5;
+        }
+
+        .naruto-quote {
+          padding: 14px 16px;
+          margin: 10px 0;
+          border-radius: 12px;
+        }
+
+        .naruto-quote::before {
+          font-size: 50px;
+          right: -8px;
+          top: -8px;
+        }
+
+        .naruto-quote p {
+          font-size: 0.9rem;
+          letter-spacing: 0.5px;
+        }
+
+        .naruto-quote .author {
+          font-size: 0.75rem;
+          margin-top: 8px;
+        }
+
+        .signature {
+          margin-top: 12px;
+          padding-top: 10px;
+        }
+
+        .signature-text {
+          font-size: 1.4rem;
+          margin-bottom: 3px;
+        }
+
+        .signature-role {
+          font-size: 0.85rem;
+          letter-spacing: 0.5px;
+        }
+
+        .blessing {
+          font-size: 1.1rem;
+          margin: 10px 0;
+        }
+
+        .btn {
+          padding: 9px 18px;
+          font-size: 0.8rem;
+          margin: 4px;
+          gap: 5px;
+        }
+
+        .nav-buttons {
+          gap: 5px;
+          margin-top: 12px;
+        }
+
+        .progress-dots {
+          gap: 6px;
+          margin-bottom: 10px;
+        }
+
+        .dot {
+          width: 8px;
+          height: 8px;
+        }
+
+        .dot.active {
+          transform: scale(1.3);
+        }
+      }
+
+      /* ==================== MÓVIL MUY PEQUEÑO (max-width: 360px) ==================== */
+
+      @media (max-width: 360px) {
+        .section {
+          padding: 6px;
+        }
+        .card {
+          padding: 14px 12px;
+        }
+        .school-name {
+          font-size: 0.8rem;
+        }
+        .welcome-text {
+          font-size: 1rem;
+        }
+        .welcome-highlight {
+          font-size: 1.4rem;
+        }
+        .section-title {
+          font-size: 1.05rem;
+        }
+        .message-text {
+          font-size: 0.78rem;
+          line-height: 1.45;
+        }
+        .quote-box {
+          padding: 10px 12px;
+        }
+        .quote-box p {
+          font-size: 0.75rem;
+        }
+        .naruto-quote {
+          padding: 12px 14px;
+        }
+        .naruto-quote p {
+          font-size: 0.82rem;
+        }
+        .btn {
+          padding: 8px 14px;
+          font-size: 0.75rem;
+        }
+        .blessing {
+          font-size: 1rem;
+        }
+        .signature-text {
+          font-size: 1.2rem;
+        }
+        .emoji-big {
+          font-size: 1.6rem;
+          margin: 8px 0;
+        }
+      }
+
+      /* ==================== TABLET (769px - 1024px) ==================== */
+
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .card {
+          padding: 40px 45px;
+          max-width: 650px;
+        }
+        .school-name {
+          font-size: 1.5rem;
+        }
+        .welcome-text {
+          font-size: 1.8rem;
+        }
+        .welcome-highlight {
+          font-size: 2.5rem;
+        }
+        .section-title {
+          font-size: 1.7rem;
+        }
+        .message-text {
+          font-size: 1.1rem;
+        }
+      }
+
+      /* ==================== LAPTOP GRANDE (min-width: 1200px) ==================== */
+
+      @media (min-width: 1200px) {
+        .card {
+          padding: 60px 80px;
+          max-width: 800px;
+        }
+        .school-name {
+          font-size: 2rem;
+        }
+        .portada-image {
+          max-width: 600px;
+        }
+        .welcome-text {
+          font-size: 2.5rem;
+        }
+        .welcome-highlight {
+          font-size: 3.5rem;
+        }
+        .section-title {
+          font-size: 2.3rem;
+        }
+        .message-text {
+          font-size: 1.35rem;
+        }
+        .quote-box p {
+          font-size: 1.3rem;
+        }
+        .naruto-quote p {
+          font-size: 1.7rem;
+        }
+        .blessing {
+          font-size: 2rem;
+        }
+        .signature-text {
+          font-size: 3rem;
         }
       }
     </style>
@@ -877,10 +993,8 @@
           <span class="dot"></span>
         </div>
 
-        <!-- Nombre del Centro ARRIBA con animación -->
         <p class="school-name">CENTRO EDUCATIVO PARTICULAR DON BOSCO</p>
 
-        <!-- Imagen del Centro -->
         <img
           src="cdb.jpg"
           alt="Centro Educativo Don Bosco"
@@ -973,28 +1087,28 @@
       </div>
     </section>
 
-    <!-- SECCIÓN 4: REFLEXIÓN (COMPACTA) -->
+    <!-- SECCIÓN 4: REFLEXIÓN -->
     <section class="section" id="section4">
-      <div class="card card-compact">
+      <div class="card">
         <div class="card-glow"></div>
-        <div class="progress-dots progress-dots-compact">
-          <span class="dot dot-compact"></span>
-          <span class="dot dot-compact"></span>
-          <span class="dot dot-compact"></span>
-          <span class="dot dot-compact active"></span>
-          <span class="dot dot-compact"></span>
+        <div class="progress-dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot active"></span>
+          <span class="dot"></span>
         </div>
 
-        <h2 class="section-title section-title-compact">💭 Una Reflexión</h2>
+        <h2 class="section-title">💭 Una Reflexión</h2>
 
-        <p class="message-text message-text-compact">
+        <p class="message-text">
           Vayan por el buen camino. Sabemos que nadie es perfecto, pero eso no
           quiere decir que hagamos lo que sea. Al contrario, debemos ser
           conscientes de nuestros actos y rectificar o corregir para un buen
           vivir.
         </p>
 
-        <div class="quote-box quote-box-compact">
+        <div class="quote-box">
           <p>
             Hay días difíciles, hay momentos de cansancio, pero recuerden por
             qué empezaron. Cada estudiante que recuerda a un buen maestro es
@@ -1002,73 +1116,62 @@
           </p>
         </div>
 
-        <p
-          class="message-text message-text-compact"
-          style="font-weight: 600; color: #2d8f4e"
-        >
+        <p class="message-text" style="font-weight: 600; color: #2d8f4e">
           Gracias por el acompañamiento 💪🏻🫡
         </p>
 
-        <div class="nav-buttons nav-buttons-compact">
-          <button
-            class="btn btn-secondary btn-compact"
-            onclick="goToSection(3)"
-          >
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="goToSection(3)">
             ← Volver
           </button>
-          <button class="btn btn-primary btn-compact" onclick="goToSection(5)">
+          <button class="btn btn-primary" onclick="goToSection(5)">
             Ver Cierre →
           </button>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN 5: CIERRE ÉPICO (COMPACTA) -->
+    <!-- SECCIÓN 5: CIERRE ÉPICO -->
     <section class="section" id="section5">
-      <div class="card card-compact">
+      <div class="card">
         <div class="card-glow"></div>
-        <div class="progress-dots progress-dots-compact">
-          <span class="dot dot-compact"></span>
-          <span class="dot dot-compact"></span>
-          <span class="dot dot-compact"></span>
-          <span class="dot dot-compact"></span>
-          <span class="dot dot-compact active"></span>
+        <div class="progress-dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot active"></span>
         </div>
 
-        <h2 class="section-title section-title-compact">⭐ Mensaje Final</h2>
+        <h2 class="section-title">⭐ Mensaje Final</h2>
 
-        <div class="quote-box quote-box-compact">
+        <div class="quote-box">
           <p>
             El verdadero éxito no es nunca caer, sino levantarse cada vez que
             caemos.
           </p>
         </div>
 
-        <div class="naruto-quote naruto-quote-compact">
+        <div class="naruto-quote">
           <p>"No retrocederé, ese es mi camino ninja"</p>
           <span class="author">— Naruto Uzumaki 🥷🏻</span>
         </div>
 
-        <p class="blessing blessing-compact">¡Bendiciones a todos! 🙌🏻</p>
+        <p class="blessing">¡Bendiciones a todos! 🙌🏻</p>
 
-        <div class="signature signature-compact">
-          <p class="signature-text signature-text-compact">Atentamente,</p>
-          <p class="signature-role signature-role-compact">
-            <strong>Orientador:</strong> Angel
-          </p>
+        <div class="signature">
+          <p class="signature-text">Atentamente,</p>
+          <p class="signature-role"><strong>Orientador:</strong> Angel</p>
         </div>
 
-        <div class="nav-buttons nav-buttons-compact">
-          <button
-            class="btn btn-secondary btn-compact"
-            onclick="goToSection(4)"
-          >
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="goToSection(4)">
             ← Volver
           </button>
-          <button class="btn btn-share btn-compact" onclick="shareContent()">
+          <button class="btn btn-share" onclick="shareContent()">
             📤 Compartir
           </button>
-          <button class="btn btn-primary btn-compact" onclick="goToSection(1)">
+          <button class="btn btn-primary" onclick="goToSection(1)">
             🏠 Inicio
           </button>
         </div>
@@ -1076,7 +1179,6 @@
     </section>
 
     <script>
-      // Crear confeti
       function createConfetti() {
         const particles = document.getElementById("particles");
         const colors = [
@@ -1089,8 +1191,10 @@
           "#00CED1",
           "#98FB98",
         ];
+        const isMobile = window.innerWidth <= 768;
+        const count = isMobile ? 40 : 80;
 
-        for (let i = 0; i < 80; i++) {
+        for (let i = 0; i < count; i++) {
           setTimeout(() => {
             const confetti = document.createElement("div");
             confetti.className = "confetti";
@@ -1098,60 +1202,56 @@
             confetti.style.background =
               colors[Math.floor(Math.random() * colors.length)];
             confetti.style.borderRadius = Math.random() > 0.5 ? "50%" : "0";
-            confetti.style.width = Math.random() * 12 + 6 + "px";
-            confetti.style.height = Math.random() * 12 + 6 + "px";
+            const size = isMobile
+              ? Math.random() * 6 + 3
+              : Math.random() * 12 + 6;
+            confetti.style.width = size + "px";
+            confetti.style.height = size + "px";
             confetti.style.animation = `confettiFall ${
               Math.random() * 3 + 2
             }s linear forwards`;
             particles.appendChild(confetti);
-
             setTimeout(() => confetti.remove(), 5000);
           }, i * 40);
         }
       }
 
-      // Crear estrellas
       function createStars() {
         const particles = document.getElementById("particles");
         const starEmojis = ["⭐", "🌟", "✨", "💫", "🌠", "🎉", "🎊"];
+        const isMobile = window.innerWidth <= 768;
+        const count = isMobile ? 25 : 50;
 
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < count; i++) {
           setTimeout(() => {
             const star = document.createElement("div");
             star.className = "star";
             star.textContent =
               starEmojis[Math.floor(Math.random() * starEmojis.length)];
             star.style.left = Math.random() * 100 + "vw";
-            star.style.fontSize = Math.random() * 25 + 15 + "px";
+            const size = isMobile
+              ? Math.random() * 15 + 10
+              : Math.random() * 25 + 15;
+            star.style.fontSize = size + "px";
             star.style.animation = `starFall ${
               Math.random() * 3 + 2
             }s linear forwards`;
             particles.appendChild(star);
-
             setTimeout(() => star.remove(), 5000);
           }, i * 60);
         }
       }
 
-      // Navegación entre secciones
       function goToSection(num) {
-        document.querySelectorAll(".section").forEach((section) => {
-          section.classList.remove("active");
-        });
-
+        document
+          .querySelectorAll(".section")
+          .forEach((s) => s.classList.remove("active"));
         document.getElementById("section" + num).classList.add("active");
-
-        if (num === 1) {
-          setTimeout(createConfetti, 300);
-        }
-        if (num === 5) {
-          setTimeout(createStars, 300);
-        }
-
+        if (num === 1) setTimeout(createConfetti, 300);
+        if (num === 5) setTimeout(createStars, 300);
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
 
-      // Función para compartir
       function shareContent() {
         const shareText =
           '✨ Un mensaje especial del Centro Educativo Particular Don Bosco ✨\n\n¡Felices vacaciones a todos los docentes! 🎄\n\n"No retrocederé, ese es mi camino ninja" 🥷🏻\n\n- Orientador Angel';
@@ -1172,13 +1272,12 @@
                 "✅ ¡Mensaje copiado! Puedes pegarlo donde quieras compartirlo."
               );
             })
-            .catch(() => {
-              alert("Comparte este enlace:\n" + window.location.href);
-            });
+            .catch(() =>
+              alert("Comparte este enlace:\n" + window.location.href)
+            );
         }
       }
 
-      // Iniciar con confeti
       window.onload = function () {
         setTimeout(createConfetti, 500);
       };
